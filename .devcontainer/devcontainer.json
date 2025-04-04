@@ -1,0 +1,33 @@
+{
+    "name": "stealthy-imitation",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "USER_ID": "1000",
+            "GROUP_ID": "1000",
+            "HTTP_PROXY": "http://placeholder",
+            "HTTPS_PROXY": "http://placeholder",
+            "http_proxy": "http://placeholder",
+            "https_proxy": "http://placeholder"
+        }
+    },
+
+    // "image":"si_pure:latest",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+    ],
+
+    "runArgs": [
+        "--gpus", "all",
+        "--ipc=host",
+        "--ulimit", "memlock=-1",
+        "--ulimit", "stack=67108864",
+        "--network=host"
+    ],
+
+    "remoteUser": "myuser"
+}

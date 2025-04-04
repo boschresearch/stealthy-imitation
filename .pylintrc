@@ -1,0 +1,2 @@
+[MESSAGES CONTROL]
+disable=redefined-outer-name, trailing-whitespace, protected-access, unused-variable, attribute-defined-outside-init, line-too-long, unspecified-encoding, logging-fstring-interpolation
